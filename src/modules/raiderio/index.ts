@@ -40,8 +40,8 @@ export default class RaiderIoModule extends ResponderBotModule
     public getHelpText()
     {
         const description = "__Description__: Instantly query Raider IO for guild or character rankings.";
-        const rankHelp = `__Usage (guild ranks)__: \`!rank [guild] [realm] [region]\`\n__Examples__: \`!rank\`, \`!rank Fresh\``;
-        const checkHelp = `__Usage (character ranks)__: \`!check [character] [realm] [region] [role]\`\n__Examples__: \`!check Chipstocks\`, \`!check Chipstocks tank\``;
+        const rankHelp = `__Usage (guild ranks)__: \`!rank [guild] [realm] [region]\`\n__Examples__: \`!rank\`, \`!rank Greggs\``;
+        const checkHelp = `__Usage (character ranks)__: \`!check [character] [realm] [region] [role]\`\n__Examples__: \`!check Nkose\`, \`!check Nkose tank\``;
         const checkExtraInfoOnRoles = `__Possible roles__: \`tank\`, \`healer\`, \`dps\``;
 
         return {
@@ -72,7 +72,7 @@ export default class RaiderIoModule extends ResponderBotModule
                 {
                     const roleArg = this.findAndRemoveRoleParameter(args);
                     const cmd: IRaiderIOCheckCommand = {
-                        name: args.length >= 2 ? args[1] : "Chipstocks",
+                        name: args.length >= 2 ? args[1] : "Nkose",
                         realm: args.length >= 3 ? args[2] : "Draenor",
                         region: args.length >= 4 ? args[3].toUpperCase() : "EU",
                         role: roleArg,
