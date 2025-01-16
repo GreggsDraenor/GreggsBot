@@ -8,7 +8,7 @@ export default class RollBotModule extends ResponderBotModule
     public static GetRollValue(max: number = RollBotModule.DEFAULT_MAX): number
     {
         max = max < 1 ? this.DEFAULT_MAX : max; // Ensure nobody fucks about
-        return Math.floor(Math.random() * (max - 2) + 1);
+        return Math.floor(Math.random() * (max) + 1);
     }
 
     private static readonly DEFAULT_MAX = 100;
